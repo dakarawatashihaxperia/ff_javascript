@@ -3,6 +3,10 @@
 let config = {
     is_block: false
 };
+const handler = () => {
+    return {cancel: config.is_block}
+};
+
 initialize();
 
 /**
@@ -15,11 +19,6 @@ function initialize() {
         reloadIcon();
     });
 }
-
-function cancelScript() {
-    return {cancel: config.is_block};
-}
-let handler = cancelScript;
 
 /**
  * On Click, toggle JavaScript Enable/Disable.
